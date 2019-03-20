@@ -15,6 +15,6 @@ npm run serve
 ```
 
 
-## :question_mark: Got any questions? 
+## :question: Got any questions? 
 
 Don't hesitate to drop me an email to [dev@bernhardwittmann.com](mailto:dev@bernhardwittmann.com)
