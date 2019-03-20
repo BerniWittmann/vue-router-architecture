@@ -1,4 +1,4 @@
-# vue-router-architecture
+# My Vue Router Architecture Approach
 
 ## Project setup
 ```

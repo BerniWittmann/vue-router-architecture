@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import EmptyRouterView from './views/EmptyRouterView.vue'
 import Home from './views/Home.vue'
+import About from './views/About.vue'
+import NestedOne from './views/NestedOne.vue'
+import NestedTwo from './views/NestedTwo.vue'
+import NestedDeep from './views/NestedDeep.vue'
 
 Vue.use(Router)
 
@@ -16,10 +21,28 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: About
+    },
+    {
+      path: '/nested',
+      component: EmptyRouterView,
+      children: [{
+        name: 'nested.one',
+        path: 'one',
+        component: NestedOne
+      }, {
+        path: 'two',
+        component: EmptyRouterView,
+        children: [{
+          path: '',
+          name: 'nested.two',
+          component: NestedTwo
+        }, {
+          path: 'deep/:id',
+          name: 'nested.deep',
+          component: NestedDeep
+        }]
+      }]
     }
   ]
 })
