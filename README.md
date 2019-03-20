@@ -1,5 +1,9 @@
 # My Vue Router Architecture Approach
 
+This repository should demonstrate my basic approach on Vue Router Architecture and nested routes.
+
+I use a view called `EmptyRouterView` (which just contains a router view) to achieve a clean way to structure my nested routing configuration.
+
 ## Project setup
 ```
 npm install
@@ -10,12 +14,7 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## :question_mark: Got any questions? 
+
+Don't hesitate to drop me an email to [dev@bernhardwittmann.com](mailto:dev@bernhardwittmann.com)
