@@ -6,6 +6,7 @@ import About from './views/About.vue'
 import NestedOne from './views/NestedOne.vue'
 import NestedTwo from './views/NestedTwo.vue'
 import NestedDeep from './views/NestedDeep.vue'
+import MyDialog from './views/MyDialog.vue'
 
 Vue.use(Router)
 
@@ -30,6 +31,13 @@ export default new Router({
         name: 'nested.one',
         path: 'one',
         component: NestedOne
+      }, {
+        path: 'dialog',
+        name: 'nested.dialog',
+        components: {
+          default: NestedOne,
+          dialog: MyDialog
+        }
       }, {
         path: 'two',
         component: EmptyRouterView,

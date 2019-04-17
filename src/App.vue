@@ -28,4 +28,17 @@
     }
   }
 }
+.btn {
+  border: none;
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  transition: all 200ms ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #42b983;
+  }
+}
 </style>
