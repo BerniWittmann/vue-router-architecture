@@ -35,6 +35,7 @@ export default {
   &__inner {
     background-color: white;
     padding: 30px;
+    margin-top: 50px; // just so that rest of the page is not overlapped
     width: 300px;
   }
 }

@@ -27,12 +27,18 @@ export default new Router({
     {
       path: '/nested',
       component: EmptyRouterView,
+      beforeEnter: (to, from, next) => {
+        if (to.name !== 'nested.dialog') {
+          localStorage.setItem('queryData', JSON.stringify(to.query))
+        }
+        next()
+      },
       children: [{
         name: 'nested.one',
         path: 'one',
         component: NestedOne
       }, {
-        path: 'dialog',
+        path: '/dialog',
         name: 'nested.dialog',
         components: {
           default: NestedOne,
